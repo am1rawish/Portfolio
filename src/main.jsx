@@ -32,20 +32,6 @@ const projects = [
   }
 ];
 
-function Header() {
-  return (
-    <header className="site-header">
-      <a className="logo" href="#top">Amira</a>
-      <nav className="nav-links" aria-label="Main navigation">
-        <a href="#about">About</a>
-        <a href="#background">Background</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </header>
-  );
-}
-
 function About() {
   return (
     <section className="section about-section" id="about">
@@ -115,12 +101,12 @@ function Contact() {
       <div>
         <p className="eyebrow">Contact</p>
         <h2>Let&apos;s connect.</h2>
-        <p>Update these links with your real email, GitHub, and LinkedIn when you are ready.</p>
+        <p>Reach out by email or find me on GitHub and LinkedIn.</p>
       </div>
       <div className="contact-links">
-        <a className="button primary-button" href="mailto:hello@example.com">Email</a>
-        <a className="button secondary-button" href="https://github.com" target="_blank" rel="noreferrer">GitHub</a>
-        <a className="button secondary-button" href="https://linkedin.com" target="_blank" rel="noreferrer">LinkedIn</a>
+        <a className="button primary-button" href="mailto:amirawish16@gmail.com">Email</a>
+        <a className="button secondary-button" href="https://github.com/am1rawish" target="_blank" rel="noreferrer">GitHub</a>
+        <a className="button secondary-button" href="https://www.linkedin.com/in/amira-wishah-6a57752bb/" target="_blank" rel="noreferrer">LinkedIn</a>
       </div>
     </section>
   );
@@ -129,7 +115,6 @@ function Contact() {
 function App() {
   return (
     <>
-      <Header />
       <main id="top">
         <About />
         <Background />
