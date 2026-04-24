@@ -44,6 +44,7 @@ function Header() {
       <a className="logo" href="#top">Amira</a>
       <nav className="nav-links" aria-label="Main navigation">
         <a href="#about">About</a>
+        <a href="#background">Background</a>
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
       </nav>
@@ -82,18 +83,33 @@ function Hero() {
 function About() {
   return (
     <section className="section about-section" id="about">
-      <div>
+      <div className="profile-picture" aria-label="Profile picture placeholder">
+        <span>Profile picture</span>
+      </div>
+      <div className="section-copy">
         <p className="eyebrow">About me</p>
-        <h2>A little about who I am and how I work.</h2>
+        <h2>Hi, I&apos;m Amira.</h2>
+        <p>
+          I&apos;m building a portfolio to share my projects, interests, and the work I&apos;m growing into.
+        </p>
+      </div>
+    </section>
+  );
+}
+
+function Background() {
+  return (
+    <section className="section background-section" id="background">
+      <div>
+        <p className="eyebrow">Background</p>
+        <h2>My background</h2>
       </div>
       <div className="section-copy">
         <p>
-          I enjoy turning ideas into websites that look good and make sense to use.
-          I care about clear structure, readable code, and designs that do not feel overwhelming.
+          Add a short summary here about your school, program, experience, interests, or the path that led you to building projects.
         </p>
         <p>
-          This section can be updated with your background, school program, interests, tools,
-          and what kind of opportunities you are looking for.
+          This is also a good place to mention the tools you are learning, the kind of work you enjoy, and what you want to explore next.
         </p>
       </div>
     </section>
@@ -149,6 +165,7 @@ function App() {
       <main id="top">
         <Hero />
         <About />
+        <Background />
         <Projects />
         <Contact />
       </main>

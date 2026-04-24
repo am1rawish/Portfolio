@@ -210,6 +210,33 @@ h3 {
 
 .about-section {
   display: grid;
+  grid-template-columns: minmax(220px, 0.72fr) 1.28fr;
+  gap: 48px;
+  align-items: center;
+  border-top: 1px solid var(--line);
+}
+
+.profile-picture {
+  display: grid;
+  width: min(100%, 310px);
+  aspect-ratio: 1;
+  place-items: center;
+  border: 2px dashed var(--lavender);
+  border-radius: 50%;
+  color: var(--purple-dark);
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.82), rgba(242, 233, 255, 0.94));
+  box-shadow: var(--shadow);
+  text-align: center;
+}
+
+.profile-picture span {
+  max-width: 130px;
+  font-weight: 800;
+}
+
+.background-section {
+  display: grid;
   grid-template-columns: 0.85fr 1.15fr;
   gap: 48px;
   border-top: 1px solid var(--line);
@@ -299,8 +326,13 @@ h3 {
 
   .hero,
   .about-section,
+  .background-section,
   .project-list {
     grid-template-columns: 1fr;
+  }
+
+  .profile-picture {
+    max-width: 260px;
   }
 
   .hero {
