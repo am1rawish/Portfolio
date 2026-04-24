@@ -49,9 +49,11 @@ function Header() {
 function About() {
   return (
     <section className="section about-section" id="about">
-      <div className="profile-picture" aria-label="Profile picture placeholder">
-        <span>Profile picture</span>
-      </div>
+      <img
+        className="profile-picture"
+        src="/profile-placeholder.jpeg"
+        alt="Pixel art profile placeholder"
+      />
       <div className="section-copy">
         <p className="eyebrow">About me</p>
         <h2>Hi, I&apos;m Amira.</h2>

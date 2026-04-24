@@ -180,22 +180,12 @@ h3 {
 }
 
 .profile-picture {
-  display: grid;
   width: min(100%, 310px);
   aspect-ratio: 1;
-  place-items: center;
-  border: 2px dashed var(--lavender);
+  border: 3px solid var(--lavender);
   border-radius: 50%;
-  color: var(--purple-dark);
-  background:
-    linear-gradient(145deg, rgba(255, 255, 255, 0.08), rgba(167, 124, 255, 0.16));
+  object-fit: cover;
   box-shadow: var(--shadow);
-  text-align: center;
-}
-
-.profile-picture span {
-  max-width: 130px;
-  font-weight: 800;
 }
 
 .background-section {
