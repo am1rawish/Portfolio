@@ -82,15 +82,6 @@ main {
   margin: 0 auto;
 }
 
-.hero {
-  display: grid;
-  grid-template-columns: minmax(0, 1.2fr) minmax(280px, 0.8fr);
-  gap: 36px;
-  align-items: center;
-  min-height: 78vh;
-  padding: 54px 0;
-}
-
 .eyebrow {
   margin: 0 0 12px;
   color: var(--purple);
@@ -130,7 +121,6 @@ h3 {
   font-size: 1.45rem;
 }
 
-.hero-text,
 .section-copy,
 .project-card p,
 .contact-section p,
@@ -138,13 +128,6 @@ h3 {
   color: var(--muted);
 }
 
-.hero-text {
-  max-width: 640px;
-  margin-bottom: 28px;
-  font-size: 1.12rem;
-}
-
-.hero-actions,
 .contact-links {
   display: flex;
   flex-wrap: wrap;
@@ -181,27 +164,6 @@ h3 {
 .secondary-button:hover,
 .secondary-button:focus-visible {
   background: var(--surface-soft);
-}
-
-.hero-card {
-  border: 1px solid var(--line);
-  border-radius: 22px;
-  padding: 30px;
-  background: var(--surface);
-  box-shadow: var(--shadow);
-}
-
-.card-label {
-  margin-top: 0;
-  color: var(--purple);
-  font-weight: 800;
-}
-
-.hero-card ul {
-  display: grid;
-  gap: 14px;
-  margin: 0;
-  padding-left: 20px;
 }
 
 .section {
@@ -324,7 +286,6 @@ h3 {
     gap: 14px;
   }
 
-  .hero,
   .about-section,
   .background-section,
   .project-list {
@@ -333,10 +294,6 @@ h3 {
 
   .profile-picture {
     max-width: 260px;
-  }
-
-  .hero {
-    min-height: auto;
   }
 
   .contact-section {
@@ -356,7 +313,6 @@ h3 {
     font-size: clamp(2.35rem, 15vw, 3.8rem);
   }
 
-  .hero-card,
   .project-card,
   .contact-section {
     border-radius: 16px;

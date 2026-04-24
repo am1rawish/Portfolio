@@ -2,12 +2,6 @@ import React from "react";
 import { createRoot } from "react-dom/client";
 import "../styles.css";
 
-const focusItems = [
-  "Frontend development",
-  "Responsive layouts",
-  "Personal and school projects"
-];
-
 const projects = [
   {
     number: "01",
@@ -49,34 +43,6 @@ function Header() {
         <a href="#contact">Contact</a>
       </nav>
     </header>
-  );
-}
-
-function Hero() {
-  return (
-    <section className="hero">
-      <div className="hero-copy">
-        <p className="eyebrow">Portfolio</p>
-        <h1>Hi, I&apos;m Amira. I build clean, thoughtful websites and projects.</h1>
-        <p className="hero-text">
-          I&apos;m interested in creating digital work that feels simple, useful, and easy to understand.
-          This is where I share what I&apos;m learning and building.
-        </p>
-        <div className="hero-actions">
-          <a className="button primary-button" href="#projects">See projects</a>
-          <a className="button secondary-button" href="#about">About me</a>
-        </div>
-      </div>
-
-      <div className="hero-card" aria-label="Portfolio summary">
-        <p className="card-label">Currently focused on</p>
-        <ul>
-          {focusItems.map((item) => (
-            <li key={item}>{item}</li>
-          ))}
-        </ul>
-      </div>
-    </section>
   );
 }
 
@@ -163,7 +129,6 @@ function App() {
     <>
       <Header />
       <main id="top">
-        <Hero />
         <About />
         <Background />
         <Projects />
