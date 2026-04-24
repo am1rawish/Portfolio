@@ -5,9 +5,9 @@
   --surface-soft: #251734;
   --ink: #fbf8ff;
   --muted: #c9badc;
-  --purple: #a77cff;
-  --purple-dark: #d7c4ff;
-  --lavender: #7c4fd1;
+  --purple: #c5a7ff;
+  --purple-dark: #eadfff;
+  --lavender: #b18cff;
   --mint: #72e3c2;
   --line: #3a2a4d;
   --shadow: 0 18px 45px rgba(0, 0, 0, 0.32);
@@ -25,7 +25,7 @@ body {
   margin: 0;
   color: var(--ink);
   background:
-    radial-gradient(circle at top left, rgba(167, 124, 255, 0.22), transparent 32rem),
+    radial-gradient(circle at top left, rgba(197, 167, 255, 0.24), transparent 32rem),
     radial-gradient(circle at bottom right, rgba(114, 227, 194, 0.12), transparent 28rem),
     var(--background);
   font-family: Arial, Helvetica, sans-serif;
