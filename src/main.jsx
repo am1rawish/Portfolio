@@ -49,9 +49,9 @@ const projects = [
   },
   {
     number: "05",
-    type: "App concept",
-    title: "Project Placeholder",
-    description: "Replace this card with a class assignment, personal build, design mockup, or coding project.",
+    type: "Website",
+    title: "Personal Portfolio Website",
+    description: "In this project, I designed and developed my personal portfolio website to showcase my background, projects, and interests in an interactive and visually polished way. I built the site using React, JavaScript, HTML, and CSS, with a focus on responsive design, custom styling, and frontend functionality that reflects both my technical skills and personal style.",
     githubHref: "https://github.com/am1rawish",
     link: "#contact",
     label: "Ask about project placeholder",
@@ -142,11 +142,28 @@ function ProjectGithubIcon() {
 function About() {
   return (
     <section className="section about-section" id="about">
-      <img
-        className="profile-picture"
-        src="/profile-placeholder.jpeg"
-        alt="Pixel art profile placeholder"
-      />
+      <div
+        className="profile-coin-shell"
+        role="img"
+        aria-label="Profile image that flips between a pixel portrait and a photo"
+      >
+        <div className="profile-coin">
+          <div className="profile-coin-face profile-coin-front">
+            <img
+              className="profile-picture"
+              src="/profile-placeholder.jpeg"
+              alt=""
+            />
+          </div>
+          <div className="profile-coin-face profile-coin-back">
+            <img
+              className="profile-picture profile-picture-real"
+              src="/profile-real.png"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
       <div className="section-copy">
         <p className="eyebrow">About me</p>
         <h2>Hi, I&apos;m Amira!</h2>
