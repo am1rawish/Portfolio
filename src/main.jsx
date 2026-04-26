@@ -5,27 +5,32 @@ import "../styles.css";
 const projects = [
   {
     number: "01",
-    type: "Website",
-    title: "Personal Portfolio",
-    description: "A simple responsive portfolio site created to introduce myself and showcase my projects.",
+    type: "Robot Game Software",
+    title: "RE-ROUTE",
+    description: "In this project, I worked with the sunfounder picrawler to develop an interactive learning game for children called RE-ROUTE. I designed and built the game mechanics, storyline, and user interface, creating an engaging experience that combines physical robotics with educational gameplay. The system uses computer vision and a navigation algorithm to walk through gameplay. This was built using Python.",
+    githubHref: "https://github.com/am1rawish",
     link: "#top",
     label: "View Personal Portfolio project",
-    action: "View project"
+    action: "Ask about this project",
+    githubLabel: "View RE-ROUTE GitHub repository"
   },
   {
     number: "02",
     type: "App concept",
-    title: "Project Placeholder",
-    description: "Replace this card with a class assignment, personal build, design mockup, or coding project.",
+    title: "Self-Checkout System Software",
+    description: "In this project, I worked with a team to design and develop a self-checkout system software for a grocery stores. I contributed to the software development process by implementing key features such as product scanning, payment processing, and user interface design. This was build using Java and JavaFX",
+    githubHref: "https://github.com/am1rawish",
     link: "#contact",
     label: "Ask about project placeholder",
-    action: "Ask about this project"
+    action: "Ask about this project",
+    githubLabel: "View Project Placeholder GitHub repository"
   },
   {
     number: "03",
-    type: "Coming soon",
-    title: "Future Project",
-    description: "Use this space for a project you are currently planning, improving, or preparing to publish.",
+    type: "Frontend development",
+    title: "Movie Theatre Booking System",
+    description: "For this project, my team and I worked to design and develop the frontend of a movie theatre booking system using React. We designed and created an intuitive user interface that allows users to browse movie listings, select showtimes, and book tickets seamlessly. This project was a practice in HCI design principles and frontend development, specificlly training my skills in interative prototyping based on user feedback.",
+    githubHref: "https://github.com/am1rawish",
     link: "#contact",
     label: "Ask about future project",
     action: "Ask about this project",
@@ -99,6 +104,7 @@ const backgroundHighlights = [
     src: "/background-community2.png",
     alt: "Community illustration"
   }
+  
 ];
 
 function ProfileIcon({ type }) {
@@ -170,16 +176,38 @@ function About() {
 function Background() {
   return (
     <section className="section background-section" id="background">
-      <div>
+      <div className="background-sidebar">
         <p className="eyebrow">Background</p>
         <h2>My background</h2>
+        <div className="background-gallery" aria-label="Background image placeholders">
+          {backgroundHighlights.map((item) => (
+            <figure className="background-gallery-item" key={item.label}>
+              <div className={`background-gallery-circle background-gallery-circle-${item.type}`}>
+                <img
+                  src={item.src}
+                  alt={item.alt}
+                  className={`background-gallery-image background-gallery-image-${item.type}`}
+                />
+              </div>
+            </figure>
+          ))}
+        </div>
       </div>
       <div className="section-copy">
         <p>
-          Add a short summary here about your school, program, experience, interests, or the path that led you to building projects.
+          Born and raised in Calgary, I'm a Palestinian-Canadian computer science student at the University of Calgary currently in my 4th year of my degree. 
+          I first learned to code when I was in 11th grade through the University of Calgary's Shulich ignite program, which sparked 
+          my interest in computer science and eventually led me to my degree. 
+          
+          </p>
+          
+          <p>Throughout my degree, I've worked as a tutor teaching math and science
+          to elementary and high school students. Outside of work and my studies, I enjoy sports, music, 
+          travel, and learning new things! 
         </p>
         <p>
-          This is also a good place to mention the tools you are learning, the kind of work you enjoy, and what you want to explore next.
+         In the future, I am interested in linking my love of sport and technology in a project. Im excited to continue 
+          learning and growing as a developer, and to share my journey through this portfolio!
         </p>
       </div>
     </section>
@@ -203,7 +231,20 @@ function Projects() {
             </div>
             <h3>{project.title}</h3>
             <p>{project.description}</p>
-            <a href={project.link} aria-label={project.label}>{project.action}</a>
+            <div className="project-divider" aria-hidden="true"></div>
+            <div className="project-actions">
+              <a href={project.link} aria-label={project.label}>{project.action}</a>
+              <a
+                className="project-github-link"
+                href={project.githubHref}
+                target="_blank"
+                rel="noreferrer"
+                aria-label={project.githubLabel}
+              >
+                <ProjectGithubIcon />
+                <span className="sr-only">{project.githubLabel}</span>
+              </a>
+            </div>
           </article>
         ))}
       </div>
@@ -212,18 +253,48 @@ function Projects() {
 }
 
 function Contact() {
+  function handleSubmit(event) {
+    event.preventDefault();
+
+    const formData = new FormData(event.currentTarget);
+    const name = formData.get("name");
+    const email = formData.get("email");
+    const message = formData.get("message");
+    const subject = `Portfolio message from ${name || "a visitor"}`;
+    const body = `Name: ${name}\nEmail: ${email}\n\n${message}`;
+
+    window.location.href = `mailto:amirawish16@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  }
+
   return (
     <section className="section contact-section" id="contact">
-      <div>
+      <div className="contact-heading">
         <p className="eyebrow">Contact</p>
         <h2>Let&apos;s connect.</h2>
-        <p>Reach out by email or find me on GitHub and LinkedIn.</p>
+        <p>Send a message and it will open as an email addressed to me.</p>
       </div>
-      <div className="contact-links">
-        <a className="button primary-button" href="mailto:amirawish16@gmail.com">Email</a>
-        <a className="button secondary-button" href="https://github.com/am1rawish" target="_blank" rel="noreferrer">GitHub</a>
-        <a className="button secondary-button" href="https://www.linkedin.com/in/amira-wishah-6a57752bb/" target="_blank" rel="noreferrer">LinkedIn</a>
-      </div>
+      <form className="contact-form" onSubmit={handleSubmit}>
+        <div className="form-row">
+          <label>
+            <span>Name</span>
+            <input name="name" type="text" placeholder="Name" required />
+          </label>
+          <label>
+            <span>Email</span>
+            <input name="email" type="email" placeholder="Email" required />
+          </label>
+        </div>
+        <label>
+          <span>Message</span>
+          <textarea name="message" placeholder="Your message..." required />
+        </label>
+        <button className="send-button" type="submit">
+          Send email
+          <svg aria-hidden="true" viewBox="0 0 24 24">
+            <path d="M4 5.5h16v13H4v-13Zm2.15 2 5.85 4.39 5.85-4.39H6.15Zm11.85 9V9.8l-6 4.5-6-4.5v6.7h12Z" />
+          </svg>
+        </button>
+      </form>
     </section>
   );
 }
@@ -237,9 +308,6 @@ function App() {
         <Projects />
         <Contact />
       </main>
-      <footer className="site-footer">
-        <p>© 2026 Amira. Built with React.</p>
-      </footer>
     </>
   );
 }
