@@ -2,6 +2,8 @@ import React from "react";
 import { createRoot } from "react-dom/client";
 import "../styles.css";
 
+const withBase = (path) => `${import.meta.env.BASE_URL}${path.replace(/^\//, "")}`;
+
 const projects = [
   {
     number: "01",
@@ -63,7 +65,7 @@ const projects = [
 const profileLinks = [
   {
     label: "Resume",
-    href: "/resume.pdf",
+    href: withBase("/resume.pdf"),
     icon: "resume"
   },
   {
@@ -82,26 +84,26 @@ const backgroundHighlights = [
    {
     label: "Technology",
     type: "tech",
-    src: "/background-computer.png",
+    src: withBase("/background-computer.png"),
     alt: "Technology illustration"
   },
   {
     label: "Personal",
     type: "personal",
-    src: "/background-personal.png",
+    src: withBase("/background-personal.png"),
     alt: "Pixel art portrait"
   },
   {
     label: "Sport",
     type: "sport",
-    src: "/background-sport.png",
+    src: withBase("/background-sport.png"),
     alt: "Soccer illustration"
   },
   
   {
     label: "Community",
     type: "community",
-    src: "/background-community2.png",
+    src: withBase("/background-community2.png"),
     alt: "Community illustration"
   }
   
@@ -151,14 +153,14 @@ function About() {
           <div className="profile-coin-face profile-coin-front">
             <img
               className="profile-picture"
-              src="/profile-placeholder.jpeg"
+              src={withBase("/profile-placeholder.jpeg")}
               alt=""
             />
           </div>
           <div className="profile-coin-face profile-coin-back">
             <img
               className="profile-picture profile-picture-real"
-              src="/profile-real.png"
+              src={withBase("/profile-real.png")}
               alt=""
             />
           </div>
