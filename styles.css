@@ -263,26 +263,43 @@ h3 {
 }
 
 .background-section .section-copy {
+  position: relative;
   align-self: start;
-  padding-top: 88px;
+  padding-top: 70px;
+  z-index: 0;
+}
+
+.background-section .section-copy::before {
+  content: "";
+  position: absolute;
+  inset: 72px -24px -24px -24px;
+  border: 1px solid rgba(216, 194, 255, 0.24);
+  border-radius: 18px;
+  background: #69269c;
+  box-shadow: 0 16px 34px rgba(20, 8, 31, 0.2);
+  pointer-events: none;
+  z-index: -1;
 }
 
 .background-sidebar {
   display: grid;
   align-content: start;
   gap: 20px;
+  justify-items: start;
 }
 
 .background-gallery {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(2, 168px);
   gap: 18px;
+  width: max-content;
+  max-width: 100%;
 }
 
 .background-gallery-item {
   margin: 0;
   display: grid;
-  justify-items: center;
+  justify-items: start;
 }
 
 .background-gallery-circle {
@@ -347,6 +364,7 @@ h3 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 18px;
+  margin-bottom: 110px;
 }
 
 .project-card {
@@ -623,6 +641,10 @@ h3 {
 
   .background-section .section-copy {
     padding-top: 0;
+  }
+
+  .background-section .section-copy::before {
+    inset: -24px;
   }
 
   .background-sidebar {
