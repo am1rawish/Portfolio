@@ -311,12 +311,16 @@ h3 {
 
 .background-gallery-image-community {
   object-fit: contain;
-  transform: scale(1);
+  transform: scale(0.87);
 }
 
 .background-gallery-image-tech {
   object-fit: contain;
   transform: scale(1.32);
+}
+.background-gallery-image-personal {
+  object-fit: contain;
+  transform: scale(0.85);
 }
 
 .background-gallery-circle-tech {
@@ -328,11 +332,11 @@ h3 {
 }
 
 .background-gallery-circle-personal {
-  background: rgba(255, 255, 255, 0.08);
+  background: #ffffff;
 }
 
 .background-gallery-circle-community {
-  background: rgba(255, 255, 255, 0.08);
+  background: #ffffff;
 }
 
 .section-heading {

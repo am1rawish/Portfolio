@@ -20,7 +20,7 @@ const projects = [
     number: "02",
     type: "Software development",
     title: "Self-Checkout System Software",
-    description: "In this project, I worked with a team to design and develop a self-checkout system software for a grocery stores. I contributed to the software development process by implementing key features such as product scanning, payment processing, and user interface design. This was build using Java and JavaFX",
+    description: "In this project, I worked with a team to design and develop a self-checkout system software for grocery stores. I contributed to the software development process by implementing key features such as product scanning, payment processing, and user interface design. This was build using Java and JavaFX",
     githubHref: "https://github.com/Bandrailian/Iteration-3",
     link: "#contact",
     label: "Ask about project placeholder",
@@ -90,8 +90,8 @@ const backgroundHighlights = [
   {
     label: "Personal",
     type: "personal",
-    src: withBase("/background-personal.png"),
-    alt: "Pixel art portrait"
+    src: withBase("/plane.png"),
+    alt: "Pixel art portrait",
   },
   {
     label: "Sport",
