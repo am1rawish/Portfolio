@@ -31,7 +31,7 @@ const projects = [
     number: "03",
     type: "Frontend development",
     title: "Movie Theatre Booking System",
-    description: "For this project, my team and I worked to design and develop the frontend of a movie theatre booking system. We designed and created an intuitive user interface that allows users to browse movie listings, select showtimes, and book tickets seamlessly. This project was designed through multiple rounds of prototyping using Figma and implemented using React. It was a practice in HCI design principles and frontend development, specificlly training my skills in interative prototyping based on user feedback.",
+    description: "For this project, my team and I worked to design and develop the frontend of a movie theatre booking system. This project was designed through multiple rounds of prototyping using Figma and implemented using React. It was a practice in HCI design principles and frontend development, specificlly training my skills in interative prototyping based on user feedback.",
     githubHref: "https://github.com/am1rawish",
     link: "#contact",
     label: "Ask about future project",
