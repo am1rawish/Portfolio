@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { createRoot } from "react-dom/client";
 import "../styles.css";
 
@@ -9,7 +9,7 @@ const projects = [
     number: "01",
     type: "Robot Game Software",
     title: "RE-ROUTE",
-    description: "In this project, I worked with the sunfounder picrawler to develop an interactive learning game for children called RE-ROUTE. I designed and built the game mechanics, storyline, and user interface, creating an engaging experience that combines physical robotics with educational gameplay. The system uses computer vision and a navigation algorithm to walk through gameplay. This was built using Python.",
+    description: "In this project, I worked with SunFounder's PiCrawler robot to develop an interactive learning game for children called RE-ROUTE. I designed and built the game mechanics, storyline, and user interface, creating an engaging experience that combines physical robotics with educational gameplay. The system uses computer vision and a navigation algorithm to walk through gameplay. This was built using Python.",
     githubHref: "https://github.com/am1rawish",
     link: "#top",
     label: "View Personal Portfolio project",
@@ -31,7 +31,7 @@ const projects = [
     number: "03",
     type: "Frontend development",
     title: "Movie Theatre Booking System",
-    description: "For this project, my team and I worked to design and develop the frontend of a movie theatre booking system using React. We designed and created an intuitive user interface that allows users to browse movie listings, select showtimes, and book tickets seamlessly. This project was a practice in HCI design principles and frontend development, specificlly training my skills in interative prototyping based on user feedback.",
+    description: "For this project, my team and I worked to design and develop the frontend of a movie theatre booking system. We designed and created an intuitive user interface that allows users to browse movie listings, select showtimes, and book tickets seamlessly. This project was designed through multiple rounds of prototyping using Figma and implemented using React. It was a practice in HCI design principles and frontend development, specificlly training my skills in interative prototyping based on user feedback.",
     githubHref: "https://github.com/am1rawish",
     link: "#contact",
     label: "Ask about future project",
@@ -142,12 +142,16 @@ function ProjectGithubIcon() {
 }
 
 function About() {
+  const [isProfileFlipped, setIsProfileFlipped] = useState(false);
+
   return (
     <section className="section about-section" id="about">
-      <div
-        className="profile-coin-shell"
-        role="img"
-        aria-label="Profile image that flips between a pixel portrait and a photo"
+      <button
+        type="button"
+        className={`profile-coin-shell${isProfileFlipped ? " is-flipped" : ""}`}
+        onClick={() => setIsProfileFlipped((current) => !current)}
+        aria-pressed={isProfileFlipped}
+        aria-label="Toggle profile image between pixel portrait and photo"
       >
         <div className="profile-coin">
           <div className="profile-coin-face profile-coin-front">
@@ -165,7 +169,7 @@ function About() {
             />
           </div>
         </div>
-      </div>
+      </button>
       <div className="section-copy">
         <p className="eyebrow">About me</p>
         <h2>Hi, I&apos;m Amira!</h2>

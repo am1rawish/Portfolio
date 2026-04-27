@@ -155,8 +155,13 @@ h3 {
 
 .profile-coin-shell {
   width: min(100%, 310px);
+  padding: 0;
+  border: 0;
+  margin: 0;
+  background: transparent;
   aspect-ratio: 1;
   perspective: 1400px;
+  cursor: pointer;
 }
 
 .profile-coin {
@@ -197,12 +202,18 @@ h3 {
 }
 
 @media (hover: hover) and (pointer: fine) {
-  .profile-coin-shell:hover .profile-coin,
-  .profile-coin-shell:focus-within .profile-coin {
+  .profile-coin-shell:not(.is-flipped):hover .profile-coin,
+  .profile-coin-shell:not(.is-flipped):focus-visible .profile-coin {
     animation: none;
     transform: rotateY(180deg);
     transition: transform 0.85s cubic-bezier(0.2, 0.8, 0.2, 1);
   }
+}
+
+.profile-coin-shell.is-flipped .profile-coin {
+  animation: none;
+  transform: rotateY(180deg);
+  transition: transform 0.85s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
 .profile-link-list {
@@ -535,6 +546,12 @@ h3 {
   transition: background 180ms ease, transform 180ms ease;
 }
 
+.send-button:disabled {
+  cursor: wait;
+  opacity: 0.72;
+  transform: none;
+}
+
 .send-button svg {
   width: 22px;
   height: 22px;
@@ -545,6 +562,28 @@ h3 {
 .send-button:focus-visible {
   background: var(--purple-dark);
   transform: translateY(-2px);
+}
+
+.contact-feedback {
+  min-height: 1.6em;
+  margin: 2px 0 0;
+  font-size: 0.96rem;
+}
+
+.contact-feedback-idle {
+  color: transparent;
+}
+
+.contact-feedback-sending {
+  color: var(--muted);
+}
+
+.contact-feedback-success {
+  color: var(--mint);
+}
+
+.contact-feedback-error {
+  color: #ffd0db;
 }
 
 .site-footer {
