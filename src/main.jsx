@@ -225,7 +225,7 @@ function Background() {
           
           <p>Throughout my degree, I've worked as a tutor teaching math and science
           to middle school and high school students. In the third year of my degree, I had the opportunity to 
-          study abroad in the United Kingdom for a semeseter, which was an incredible experience that allowed me to 
+          study abroad in the United Kingdom for a semester, which was an incredible experience that allowed me to 
           explore a new culture and gain a global perspective. Outside of work and my studies, I enjoy sports, music, 
           travelling, and learning new things!
         </p>
