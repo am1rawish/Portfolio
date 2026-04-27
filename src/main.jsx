@@ -218,16 +218,16 @@ function Background() {
       </div>
       <div className="section-copy">
         <p>
-          Born and raised in Calgary, I'm a Palestinian-Canadian computer science student at the University of Calgary currently in my 4th year of my degree. 
+          I'm a computer science student at the University of Calgary currently in the 4th year of my degree. 
           I first learned to code when I was in 11th grade through the University of Calgary's Shulich ignite program, which sparked 
           my interest in computer science and eventually led me to my degree. 
           </p>
           
           <p>Throughout my degree, I've worked as a tutor teaching math and science
-          to elementary and high school students. Outside of work and my studies, I enjoy sports, music, 
-          travelling, and learning new things! In the third year of my degree, I had the opportunity to 
+          to elementary and high school students. In the third year of my degree, I had the opportunity to 
           study abroad in the United Kingdom for a semeseter, which was an incredible experience that allowed me to 
-          explore a new culture and gain a global perspective. 
+          explore a new culture and gain a global perspective. Outside of work and my studies, I enjoy sports, music, 
+          travelling, and learning new things!
         </p>
 
         <p>
