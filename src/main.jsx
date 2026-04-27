@@ -18,7 +18,7 @@ const projects = [
   },
   {
     number: "02",
-    type: "App concept",
+    type: "Software development",
     title: "Self-Checkout System Software",
     description: "In this project, I worked with a team to design and develop a self-checkout system software for a grocery stores. I contributed to the software development process by implementing key features such as product scanning, payment processing, and user interface design. This was build using Java and JavaFX",
     githubHref: "https://github.com/am1rawish",
@@ -293,8 +293,7 @@ function Contact() {
     <section className="section contact-section" id="contact">
       <div className="contact-heading">
         <p className="eyebrow">Contact</p>
-        <h2>Let&apos;s connect.</h2>
-        <p>Send a message and it will open as an email addressed to me.</p>
+        <h2>Let&apos;s connect!</h2>
       </div>
       <form className="contact-form" onSubmit={handleSubmit}>
         <div className="form-row">
